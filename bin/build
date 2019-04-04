@@ -7,4 +7,4 @@ mvn package # creates target/demo.war
 mkdir -p pkg
 mv target/demo.war pkg/demo.war
 
-docker build -t demo-java .
+
