@@ -11,7 +11,8 @@ sudo usermod -a -G docker jenkins
 sudo chmod 777 /var/run/docker.sock
 sudo docker images
 whoami
-docker build -t demo-java .
-sudo docker images
+sudo docker build -t demo-java .
+ sudo docker exec $(docker ps -ql) bash'
+
 
 
