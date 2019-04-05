@@ -7,8 +7,8 @@ mvn package # creates target/demo.war
 mkdir -p pkg
 mv target/demo.war pkg/demo.war
 whoami
-sudo usermod -a -G docker priya hiremath'
-sudo chmod 777 /var/run/docker.sock'
+sudo usermod -a -G docker jenkins
+sudo chmod 777 /var/run/docker.sock
 sudo docker images
 whoami
 docker build -t demo-java .
