@@ -19,9 +19,9 @@ sudo docker run -it -p 80:8080 -d demo-java
 echo 'listing of container'
 sudo docker container ls -a
 # ssh sysadmin@13.71.114.135
-Cnt_ip = sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $(docker ps -q)
-curl $Cnt_ip:8080/demo/Hello
-curl $Cnt_ip:8080/demo/index.jsp
+CNT_IP = sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $(docker ps -q)
+curl $CNT_IP:8080/demo/Hello
+curl $CNT_IP:8080/demo/index.jsp
 
 
 
