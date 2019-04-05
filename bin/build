@@ -12,8 +12,11 @@ sudo chmod 777 /var/run/docker.sock
 sudo docker images
 whoami
 sudo docker build -t demo-java .
+sudo docker container stop $(docker container ls -aq)
+sudo docker container rm $(docker container ls -aq)
 sudo docker run --rm -p 80:8080 -d demo-java
-sudo docker container ls
+#sudo docker container ls
+echo 'listing of container'
 sudo docker container ls -a
 # ssh sysadmin@13.71.114.135
 curl localhost:8080/demo/Hello
