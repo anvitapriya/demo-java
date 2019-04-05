@@ -6,6 +6,7 @@ mvn package # creates target/demo.war
 # other build files that bloats the upload context sent to docker.
 mkdir -p pkg
 mv target/demo.war pkg/demo.war
+whoami
 docker build -t demo-java .
 
 
