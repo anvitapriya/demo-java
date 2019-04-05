@@ -13,7 +13,7 @@ sudo docker images
 whoami
 sudo docker build -t demo-java .
 sudo docker run --rm -p 8080:8080 -d demo-java
-sudo docker exec  $(docker ps -ql) bash
+# ssh sysadmin@13.71.114.135
 curl localhost:8080/demo/Hello
 curl localhost:8080/demo/index.jsp
 
