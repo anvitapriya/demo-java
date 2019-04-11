@@ -9,16 +9,14 @@ mv target/demo.war pkg/demo.war
 whoami
 sudo usermod -a -G docker jenkins
 sudo chmod 777 /var/run/docker.sock
-sudo docker images
 whoami
 sudo docker build -t demo-java .
 sudo docker container stop $(docker container ls -aq)
 sudo docker container rm $(docker container ls -aq)
 sudo docker run -it -p 80:8080 -d demo-java
-#sudo docker container ls
 pwd
 dockerRun=sudo docker inspect -f {{.NetworkSettings.IPAddress}} $(docker ps -q)
-echo "dockerrun is:"$dockerRun
+echo "dockerrun is:\t" $dockerRun
 echo 'this is curl stage'
 curl -s -k -X GET --url  http://172.17.0.2:8080/demo/Hello
 curl -s -k -X  GET --url  http://172.17.0.2:8080/demo/index.jsp
