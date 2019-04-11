@@ -20,8 +20,8 @@ echo 'listing of container'
 sudo docker container ls -a
 dockerRun=sudo docker inspect -f '{{.NetworkSettings.IPAddress}}' $(docker ps -q)
 echo '$dockerRun'
-curl $dockerRun:8080/demo/Hello
-curl $dockerRun:8080/demo/index.jsp
+curl -s https://$dockerRun:8080/demo/Hello
+curl -s https://$dockerRun:8080/demo/index.jsp
 # ssh sysadmin@13.71.114.135
 echo 'done'
 
