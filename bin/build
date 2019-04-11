@@ -18,6 +18,8 @@ sudo docker run -it -p 80:8080 -d demo-java
 #sudo docker container ls
 echo 'listing of container'
 sudo docker container ls -a
+dockerRun=sudo docker inspect -f '{{.NetworkSettings.IPAddress}}' $(docker ps -q)
+echo 'dockerRun'
 # ssh sysadmin@13.71.114.135
 echo 'done'
 
