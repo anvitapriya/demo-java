@@ -18,8 +18,6 @@ pwd
 dockerRun=sudo docker inspect -f {{.NetworkSettings.IPAddress}} $(docker ps -q)
 echo "dockerrun is:" $dockerRun
 echo 'this is curl stage'
-sudo curl -s -k -X GET --url  http://172.17.0.2:8080/demo/Hello
-sudo curl -s -k -X  GET --url  http://172.17.0.2:8080/demo/index.jsp
 # ssh sysadmin@13.71.114.135
 echo 'done'
 
